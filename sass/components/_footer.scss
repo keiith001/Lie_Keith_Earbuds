@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as v;
+
+footer {
+    background-color: v.$black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 60px;
+
+    p {
+        text-align: center;
+        font-family: v.$body-font;
+        color: v.$white;
+        font-size: v.$m-bodycopy;
+    }
+}
