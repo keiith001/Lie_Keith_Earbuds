@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- link to greensock main library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    
+    <title>Airpods Play</title>
+  </head>
+
+  <body>
+    <h1 class="hidden">Airpods Play Product Page</h1>
+
+    <!-- NAVIGATION -->
+    <header id="main-header" class="full-width-grid-con">
+      <h2 class="hidden">Airpods Play Header</h2>
+
+      <!-- Navigation -->
+      <nav class="col-span-full">
+        <!-- Logo Nav -->
+        <div id="logo-nav">
+          <a href="index.html"><img src="./images/apple-logo.svg" alt="Keith's Logo" class="col-span-2"></a>
+        </div>
+
+        <!-- Section Nav -->
+        <ul id="sect-nav">
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Tech Specs</a></li>
+        </ul>
+      </nav>      
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- Hero Banner (Earbuds Scrub) -->
+      <section class="full-width-grid-con">
+        <h2 class="hidden">Airpods Play Animated Trailer</h2>
+        <!-- Placeholder Preview -->
+        <video controls preload="metadata" class="col-span-full">
+          <source src="./video/Earbuds-Sequence0000.mp4" type="video/mp4">
+        </video> 
+        <canvas id="animated-frame"></canvas> 
+      </section>
+
+      <!-- Overview -->
+      <section id="overview" class="grid-con">
+        <h2 class="hidden">Airpods Play Overview Summary</h2>
+        <p class="col-span-full">Up to 2x more Active Noise Cancellation.1 Adaptive Audio that tailors noise control to your environment.2 Personalized Spatial Audio that immerses you in sound.3 And active Hearing Protection4 for safer, everyday listening.</p>
+      </section>
+
+      <!-- Tech Specs -->
+      <section class="grid-con">
+        <model-viewer id="model" src="./model/3D_Earbuds-Sticker-Static.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./model/poster.webp" shadow-intensity="0" exposure="1" class="col-span-full">
+
+          <!-- 1. Comfortable Earbuds -->
+          <button class="Hotspot" slot="hotspot-1" data-position="0.006397501381901783m 0.050215281764676836m 0.01418883313753834m" data-normal="-0.14251327877312406m 0.08403864994721527m 0.9862187742526418m" data-visibility-attribute="visible">
+            <div id="hotspot-1" class="hotspotInfo"></div>
+          </button>
+          
+          <!-- 2. Noise Cancelling Microphone -->
+          <button class="Hotspot" slot="hotspot-2" data-position="0.01809601446692699m 0.05663092400038948m 0.00179556389820789m" data-normal="0.6994591568145246m 0.714639432116849m -0.0068825875963830834m" data-visibility-attribute="visible">
+              <div id="hotspot-2" class="hotspotInfo"></div>
+          </button>
+          
+          <!-- 3. Customized Body -->
+          <button class="Hotspot" slot="hotspot-3" data-position="-0.015386410414906335m 0.05495176248924158m 0.008446019476119199m" data-normal="-0.5848748004342004m 0.39472416594692894m 0.7086002403573936m" data-visibility-attribute="visible">
+              <div id="hotspot-3" class="hotspotInfo"></div>
+          </button>
+          
+          <!-- 4. Fast Charging Case -->
+          <button class="Hotspot" slot="hotspot-4" data-position="-0.0006119764905073526m 0.01072105679027871m 0.016447289861389436m" data-normal="-2.4492937051703357e-16m 0m 1m" data-visibility-attribute="visible">
+              <div id="hotspot-4" class="hotspotInfo"></div>
+          </button>
+          
+          <!-- 5. High Definition Audio -->
+          <button class="Hotspot" slot="hotspot-5" data-position="-0.006437808001481927m 0.05261800297363319m 0.001955642772954548m" data-normal="0.9944272849837863m 0.07355224280427294m -0.075527759520834m" data-visibility-attribute="visible">
+              <div id="hotspot-5" class="hotspotInfo"></div>
+          </button>
+
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+
+          <div id="ar-prompt">
+              <img src="./model/ar_hand_prompt.png">
+          </div>
+        </model-viewer>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="full-width-grid-con">
+      <div class="col-span-full">
+        <p>All Rights Reserved Apple</p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+
+    <!-- Loads <model-viewer> for browsers: -->
+      <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+  </body>
+</html>
