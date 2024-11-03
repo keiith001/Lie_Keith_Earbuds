@@ -1,0 +1,137 @@
+@use "../abstracts/variables" as v;
+
+model-viewer {
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.Hotspot {
+  background: url(../images/SVG/push-pin-2.svg) no-repeat center;
+  -webkit-filter: drop-shadow(2px 2px 3px #35353552);
+  filter: drop-shadow(2px 2px 3px #35353552);
+  border: 0;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+.Hotspot:not([data-visible]) {
+  opacity: 0;
+}
+
+.Hotspot:focus {
+  border: 4px solid rgb(200, 0, 0);
+  height: 32px;
+  outline: none;
+}
+
+.Hotspot:hover {
+  transform: scale(1.2);
+}
+
+.hotspotInfo{
+  visibility: hidden;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-family: v.$body-font;
+  left: calc(100% + 1em);
+  max-width: 500px;
+  padding: 1em 1em;
+  position: absolute;
+  top: 50%;
+
+  p {
+    color: v.$black;
+    font-size: v.$m-bodycopy;
+    font-weight: 400;
+    text-align: start;
+  }
+
+  h2 {
+    font-size: v.$headercopy;
+    color: v.$black;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: start;
+  }
+
+  img {
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+}
+
+#ar-button {
+  background-image: url(../model/ar_icon.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  bottom: 16px;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  border: 1px solid #DADCE0;
+}
+
+#ar-button:active {
+  background-color: #E8EAED;
+}
+
+#ar-button:focus {
+  outline: none;
+}
+
+#ar-button:focus-visible {
+  outline: 1px solid #4285f4;
+}
+
+@keyframes circle {
+  from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
+  to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes elongate {
+  from { transform: translateX(100px); }
+  to   { transform: translateX(-100px); }
+}
+
+model-viewer > #ar-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  animation: elongate 2s infinite ease-in-out alternate;
+  display: none;
+}
+
+model-viewer[ar-status="session-started"] > #ar-prompt {
+  display: block;
+}
+
+model-viewer > #ar-prompt > img {
+  animation: circle 4s linear infinite;
+}
+
+// Custom loadng bar
+
+model-viewer::part(default-progress-bar) {
+  height: 12px;
+  border-radius: 12px;
+  background-color: v.$black;
+}
