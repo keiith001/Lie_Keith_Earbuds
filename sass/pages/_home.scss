@@ -1,14 +1,33 @@
 @use "../abstracts/variables" as v;
 
+#hero-banner {
+    margin-top: 50px;
+}
+
 #overview {
     text-align: center;
     font-family: v.$header-font;
     margin: 50px auto;
 
     p {
-        font-size: v.$m-headercopy;
+        font-size: v.$headercopy;
         font-weight: 700;
-        line-height: 42px;
+        line-height: 32px;
         color: v.$black;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #overview {
+        text-align: center;
+        font-family: v.$header-font;
+        margin: 50px auto;
+
+        p {
+            font-size: v.$m-headercopy;
+            font-weight: 700;
+            line-height: 42px;
+            color: v.$black;
+        }
     }
 }

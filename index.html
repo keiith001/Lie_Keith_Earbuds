@@ -18,24 +18,33 @@
       <h2 class="hidden">Airpods Play Header</h2>
 
       <!-- Navigation -->
-      <nav class="col-span-full">
+      <nav id="main-nav">
         <!-- Logo Nav -->
         <div id="logo-nav">
           <a href="index.html"><img src="./images/apple-logo.svg" alt="Keith's Logo" class="col-span-2"></a>
         </div>
+        
+        <div class="off-menu">
+          <!-- Close Btn -->
+          <img class="close-btn" src="./images/close-button-white.svg">
 
-        <!-- Section Nav -->
-        <ul id="sect-nav">
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Tech Specs</a></li>
-        </ul>
+          <!-- Section Nav -->
+          <ul id="sect-nav">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Tech Specs</a></li>
+          </ul>
+        </div>
+
+        <div class="hamburger-btn">
+          <img src="./images/hamburger-button.svg">
+        </div>
       </nav>      
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
       <!-- Hero Banner (Earbuds Scrub) -->
-      <section class="full-width-grid-con">
+      <section id="hero-banner" class="full-width-grid-con">
         <h2 class="hidden">Airpods Play Animated Trailer</h2>
         <!-- Placeholder Preview -->
         <video controls preload="metadata" class="col-span-full">
