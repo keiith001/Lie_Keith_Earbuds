@@ -2,6 +2,29 @@
     console.log("Js is Connected");
     console.log("IIFE Fired");
     
+    // Hamburger Menu
+    // Mobile Navigation
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const closeBurgerBtn = document.querySelector('.close-btn');
+    const offMenu = document.querySelector('.off-menu');
+
+    // Functions
+    // =====================
+    function openBurger() {
+        offMenu.classList.toggle('active');
+        console.log('Hamnburger Menu Opened');
+    }
+
+    function closeBurger() {
+        offMenu.classList.toggle('active');
+        console.log('Hamburger Menu Closed');
+    }
+
+    // Event Listener
+    // =====================
+    hamburgerBtn.addEventListener('click', openBurger);
+    closeBurgerBtn.addEventListener('click', closeBurger)
+
     // Hotspot Variables
     const model = document.querySelector("#model");
     const hotspots = document.querySelectorAll(".Hotspot")

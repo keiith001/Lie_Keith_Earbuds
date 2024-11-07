@@ -1,7 +1,16 @@
 @use "../abstracts/variables" as v;
 
+#main-header {
+    top: 0;
+    position: fixed;
+    background-color: v.$white;
+    box-shadow: 0 3px 3px rgba(62, 62, 62, 0.226);
+    z-index: 10;
+    display: block;
+    width: 100%;
+}
+
 nav {
-    padding: 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,6 +20,7 @@ nav {
 #logo-nav {
     width: 30px;
     height: 30px;
+    margin: 12px;
 
     img {
         width: 30px;
@@ -18,26 +28,107 @@ nav {
     }
 }
 
+.hamburger-btn {
+    margin: 12px;
+}
+
+.off-menu {
+    z-index: 30;
+    background-color: v.$black;
+    font-family: v.$body-font;
+    font-size: v.$title;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    transition: .3s ease-in-out;
+}
+
+.close-btn {
+    margin-bottom: 12px;
+    width: 20px;
+    height: 20px;
+}
+
 #sect-nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px;
+    flex-direction: column;
+    align-items: end;
     font-family: v.$body-font;
-    font-size: v.$l-bodycopy;
+    font-size: v.$title;
+    margin-bottom: 10px;
 
     li {
         list-style: none;
         margin-left: 12px;
+        margin-top: 10px;
 
         a {
             text-decoration: none;
-            color: v.$black;
-            transition: all 0.3 ease-in-out;
+            color: v.$white;
         }
 
         a:hover {
             font-weight: 700;
         }
     }
+}
+
+.off-menu.active {
+    right: 0;
+}
+
+// Tablet Size
+@media screen and (min-width: 768px) {
+    .hamburger-btn {
+        display: none;
+    }
+
+    .off-menu {
+        z-index: 30;
+        background: none;
+        padding: 8px;
+        margin-right: 8px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        text-align: center;
+        transition: .3s ease-in-out;
+        right: 0;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    #sect-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        font-family: v.$body-font;
+        font-size: v.$l-bodycopy;
+        margin-bottom: 0;
+
+        li {
+            list-style: none;
+            margin-left: 12px;
+            margin-top: 10px;
+
+            a {
+                text-decoration: none;
+                color: v.$black;
+            }
+
+            a:hover {
+                font-weight: 700;
+            }
+        }
+    }
+
 }
