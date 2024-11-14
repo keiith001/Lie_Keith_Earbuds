@@ -27,13 +27,13 @@
     }
 
     gsap.to(airpodsSequence, {
-      frame: 780,
+      frame: 779,
       snap: "frame",
       scrollTrigger: {
         trigger: "#scrub-frame",
         pin: true,
         scrub: 1,
-        markers: true,
+        markers: false,
         start: "top top"
       },
       onUpdate: render
