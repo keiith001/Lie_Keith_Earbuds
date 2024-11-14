@@ -46,11 +46,10 @@
       <!-- Hero Banner (Earbuds Scrub) -->
       <section id="hero-banner" class="full-width-grid-con">
         <h2 class="hidden">Airpods Play Animated Trailer</h2>
-        <!-- Placeholder Preview -->
-        <video controls preload="metadata" class="col-span-full">
-          <source src="./video/Earbuds-Sequence0000.mp4" type="video/mp4">
-        </video> 
-        <canvas id="animated-frame"></canvas> 
+        <!-- Earbud Scrub -->
+        <div class="col-span-full">
+          <canvas id="scrub-frame"></canvas> 
+        </div>
       </section>
 
       <!-- Overview -->
@@ -107,6 +106,11 @@
     </footer>
 
     <!-- JS -->
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+
+    <!-- Main JS -->
     <script src="./js/main.js"></script>
 
     <!-- Loads <model-viewer> for browsers: -->

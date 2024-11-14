@@ -1,6 +1,56 @@
 (() => {
     console.log("Js is Connected");
     console.log("IIFE Fired");
+
+    // Animated Earbuds Scrub Frame
+    const canvas = document.querySelector('#scrub-frame');
+    const context = canvas.getContext('2d');
+
+    canvas.width = 1920;
+    canvas.height = 1080;
+
+    const frameCount = 780;
+
+    const imgs = [];
+
+    // Image Sequences Frame
+
+    for(let i = 0; i < frameCount; i++) {
+      const img = new Image();
+
+      img.src = `images/earbuds-sequence/Earbuds-Sequence${(i+1).toString().padStart(4, '0')}.webp`;
+      imgs.push(img);
+    }
+
+    const airpodsSequence = {
+      frame: 0
+    }
+
+    gsap.to(airpodsSequence, {
+      frame: 780,
+      snap: "frame",
+      scrollTrigger: {
+        trigger: "#scrub-frame",
+        pin: true,
+        scrub: 1,
+        markers: true,
+        start: "top top"
+      },
+      onUpdate: render
+    })
+
+    // Render Frames Function
+    function render() {
+      console.log(imgs[airpodsSequence.frame]);
+
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(imgs[airpodsSequence.frame], 0, 0);
+    }
+
+    // Render Event Listener
+    imgs[0].addEventListener("load", render);
+
+    // ============================================
     
     // Hamburger Menu
     // Mobile Navigation
