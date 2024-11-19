@@ -32,7 +32,7 @@
       scrollTrigger: {
         trigger: "#scrub-frame",
         pin: true,
-        scrub: 1,
+        scrub: 3,
         markers: false,
         start: "top top"
       },
