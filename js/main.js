@@ -150,5 +150,9 @@
 
     // Initialize Data Load
     loadInfo();
+
+    // ============================================
     
+    // X-Ray Slider Function
+
   })();

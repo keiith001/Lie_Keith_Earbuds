@@ -1,1 +1,13 @@
 @use "../abstracts/variables" as v;
+// Mobile Style
+h2 {
+    font-family: v.$header-font;
+    font-size: v.$headercopy;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: v.$body-font;
+    font-size: v.$bodycopy;
+}
