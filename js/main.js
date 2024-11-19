@@ -18,7 +18,7 @@
     for(let i = 0; i < frameCount; i++) {
       const img = new Image();
 
-      img.src = `images/earbuds-sequence/Earbuds-Sequence${(i+1).toString().padStart(4, '0')}.webp`;
+      img.src = `images/earbuds-sequence/Earbuds-Sequence${(i+1).toString().padStart(4, '0')}.jpg`;
       imgs.push(img);
     }
 
