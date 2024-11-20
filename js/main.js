@@ -154,5 +154,14 @@
     // ============================================
     
     // X-Ray Slider Function
+    const divider = document.querySelector("#divider");
+    const slider = document.querySelector("#slider");
+
+    function moveDivider() {
+      console.log(slider.value);
+      divider.style.width = slider.value+"%";
+    }
+
+    slider.addEventListener("input", moveDivider);
 
   })();
