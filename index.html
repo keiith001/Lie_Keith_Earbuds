@@ -21,7 +21,7 @@
       <nav id="main-nav">
         <!-- Logo Nav -->
         <div id="logo-nav">
-          <a href="index.html"><img src="./images/apple-logo.svg" alt="Keith's Logo" class="col-span-2"></a>
+          <a href="index.html"><img src="./images/apple-logo.svg" alt="Apple Logo" class="col-span-2"></a>
         </div>
         
         <div class="off-menu">
@@ -55,7 +55,7 @@
       <!-- Overview -->
       <section id="overview" class="grid-con">
         <h2 class="hidden">Airpods Play Overview Summary</h2>
-        <div id="overview-cont" class="col-span-full">
+        <div id="overview-cont" class="col-span-full m-col-start-2 m-col-span-10">
           <img id="grin-face" src="./images/emojis/grinning-face.png" alt="Grinning Emoji Face">
           <img id="heart-face" src="./images/emojis/face-heart.png" alt="Smiley Emoji with Heart Eyes">
           <img id="smile-face" src="./images/emojis/smiling-face.png" alt="Smiling Emoji Face">
@@ -65,10 +65,10 @@
 
       <!-- Tech Specs -->
       <section id="tech-specs" class="grid-con">
-        <h2 class="col-span-3">Airpods Play Spesification</h2>
-        <img id="smile-sunglass" class="col-span-1" src="./images/emojis/smile-sunglasses.png" alt="Smiley Emoji with Sunglasses">
+        <h2 class="col-span-3 m-col-start-2">Airpods Play Spesification</h2>
+        <img id="smile-sunglass" class="col-span-1 m-col-start-11 m-col-span-1" src="./images/emojis/smile-sunglasses.png" alt="Smiley Emoji with Sunglasses">
 
-        <model-viewer id="model" src="./model/3D_Earbuds-Sticker-Static.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./model/poster.webp" shadow-intensity="0" exposure="1" class="col-span-full">
+        <model-viewer id="model" src="./model/3D_Earbuds-Sticker-Static.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./model/poster.webp" shadow-intensity="0" exposure="1" class="col-span-full m-col-start-2 m-col-span-10">
 
           <!-- 1. Comfortable Earbuds -->
           <button class="Hotspot" slot="hotspot-1" data-position="0.006397501381901783m 0.050215281764676836m 0.01418883313753834m" data-normal="-0.14251327877312406m 0.08403864994721527m 0.9862187742526418m" data-visibility-attribute="visible">
@@ -104,12 +104,12 @@
           </div>
         </model-viewer>
         
-        <img class="col-span-2" src="./images/audio.jpg">
-        <img class="col-span-2" src="./images/body.jpg">
-        <img class="col-span-2" src="./images/buds.jpg">
-        <img class="col-span-2" src="./images/case.jpg">
+        <img class="col-span-2 m-col-start-2 m-col-span-5" src="./images/audio.jpg">
+        <img class="col-span-2 m-col-start-7 m-col-span-5" src="./images/body.jpg">
+        <img class="col-span-2 m-col-start-2 m-col-span-5" src="./images/buds.jpg">
+        <img class="col-span-2 m-col-start-7 m-col-span-5" src="./images/case.jpg">
 
-        <div id="tech-details" class="col-span-full">
+        <div id="tech-details" class="col-span-full m-col-start-2 m-col-span-10">
           <ul>
             <li>Up to 2x more Active Noise Cancellation.</li>
             <li>Adaptive Audio that tailors noise control to your environment.</li>
@@ -121,18 +121,132 @@
 
       <!-- X-Ray Slider -->
       <section id="x-ray-cont" class="grid-con">
-        <img id="eyes-emoji" class="col-span-1" src="./images/emojis/eyes.png" alt="Eyes Emoji">
-        <h2 class="col-span-3">Look What's Behind The Machine</h2>
+        <img id="eyes-emoji" class="col-span-1 m-col-start-2" src="./images/emojis/eyes.png" alt="Eyes Emoji">
+        <h2 class="col-span-4 m-col-start-8">Look What's Behind The Machine</h2>
 
         <!-- X-Ray Divider Section -->
-        
+        <div class="col-span-full">
+          <img src="./images/audio.jpg" alt="Placeholder">
+        </div>        
       </section>
     </main>
 
     <!-- FOOTER -->
     <footer id="footer" class="full-width-grid-con">
-      <div class="col-span-full">
-        <p>All Rights Reserved Apple</p>
+      <!-- Bread Crumbs -->
+      <div id="foot-breadcrumbs" class="col-span-full">
+        <a href="index.html"><img id="apple-logo" src="./images/apple-logo.svg" alt="Apple Logo" class="col-span-2"></a>
+        <img src="./images/right-arrow.svg" alt="Right Arrow">
+        <a href="#">Airpods</a>
+        <img src="./images/right-arrow.svg" alt="Right Arrow">
+        <a href="#">Airpods Play</a>
+      </div>
+
+      <!-- Sitemap  Mobile-->
+      <div id="sitemap" class="col-span-full">
+        <h2 class="hidden">Mobile Size Sitemap</h2>
+        <details id="shop">
+          <summary>Shop and Learn</summary>
+          <ul>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">Airpods</a></li>
+          </ul>
+        </details>
+
+        <div class="line-seperator col-span-full"></div>
+
+        <details id="account">
+          <summary>Account</summary>
+          <ul>
+            <li><a href="#">Manage Your Apple Account</a></li>
+            <li><a href="#">Apple Store Account</a></li>
+            <li><a href="#">iCloud.com</a></li>
+          </ul>
+        </details>
+
+        <div class="line-seperator col-span-full"></div>
+
+        <details id="about">
+          <summary>About Apple</summary>
+          <ul>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">Apple Leadership</a></li>
+            <li><a href="#">Career Opportunities</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Ethics &amp; Compliance</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact Apple</a></li>
+          </ul>
+        </details>
+      </div>
+
+      <!-- Sitemap Tablet - Desktop -->
+      <div id="ml-sitemap" class="col-span-full">
+        <h2 class="hidden">Tablet to Desktop Size Sitemap</h2>
+        <div id="m-shop">
+          <h3>Shop and Learn</h3>
+          <ul>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">Airpods</a></li>
+          </ul>
+        </div>
+
+        <div id="m-account">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="#">Manage Your Apple Account</a></li>
+            <li><a href="#">Apple Store Account</a></li>
+            <li><a href="#">iCloud.com</a></li>
+          </ul>
+        </div>
+
+        <div id="m-about">
+          <h3>About Apple</h3>
+          <ul>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">Apple Leadership</a></li>
+            <li><a href="#">Career Opportunities</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Ethics &amp; Compliance</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact Apple</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Text -->
+      <div id="footer-capt" class="col-span-full">
+        <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
+      </div>
+
+      <div class="line-seperator col-span-full"></div>
+
+      <!-- Copyright & Language -->
+      <div id="copyright" class="col-span-full">
+        <p>Copyright © 2024 Apple Inc. All rights reserved.</p>
+        <p>Canada | Francais</p>
+      </div>
+
+      <!-- Footer Sitemap -->
+      <div id="footer-sitemap" class="col-span-full">
+        <p>
+          <a href="#">Privacy Policy |</a>
+          <a href="#">Use of Cookies |</a>
+          <a href="#">Terms of Use |</a>
+          <a href="#">Sales and Refunds |</a>
+          <a href="#">Legal |</a>
+          <a href="#">Site Map </a>
+        </p>
       </div>
     </footer>
 

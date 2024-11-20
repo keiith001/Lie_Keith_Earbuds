@@ -89,9 +89,35 @@
 
 @media screen and (min-width: 768px) {
     #overview {
-        text-align: center;
-        font-family: v.$header-font;
-        margin: 50px auto;
+        margin-top: 125px;
+        margin-bottom: 50px;
+        padding: 20px;
+
+        #grin-face {
+            position: absolute;
+            width: 80px;
+            top: -80px;
+            left: 50%;
+            margin-left: -40px;
+        }
+    
+        #heart-face {
+            position: absolute;
+            width: 50px;
+            top: -40px;
+            left: 50%;
+            margin-left: -110px;
+            rotate: -30deg;
+        }
+    
+        #smile-face {
+            position: absolute;
+            width: 50px;
+            top: -40px;
+            right: 50%;
+            margin-right: -110px;
+            rotate: 30deg;
+        }
 
         p {
             font-size: v.$m-headercopy;
@@ -100,4 +126,33 @@
             color: v.$black;
         }
     }
+
+    #tech-specs {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        h2 {
+            font-size: v.$m-title;
+            margin-bottom: 40px;
+        }
+
+        #tech-details {
+            font-family: v.$body-font;
+            font-size: v.$m-bodycopy;
+            font-weight: 400;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    #x-ray-cont {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        h2 {
+            font-size: v.$m-title;
+            margin-bottom: 40px;
+        }
+    }
+
 }
