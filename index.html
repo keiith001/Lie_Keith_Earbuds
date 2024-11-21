@@ -63,9 +63,34 @@
         </div>
       </section>
 
+      <!-- Feeatures -->
+      <div id="features" class="feat-carousel-cont col-span-full">
+        <div class="f-carousel">
+          <div class="feat-group">
+            <img src="./images/anc.png" alt="Active Noice Cancellation Image">
+            <p>Up to <span>2x</span> more Active Noise Cancellation.</p>
+          </div>
+
+          <div class="feat-group">
+            <img src="./images/adaptive-audio.jpg" alt="Adaptive Audio Image">
+            <p><span>Adaptive Audio</span> that tailors noise control to your environment.</p>
+          </div>
+
+          <div class="feat-group">
+            <img src="./images/spatial-audio.png" alt="Spatial Audio Image">
+            <p>Personalized <span>Spatial Audio</span> that immerses you in sound.</p>
+          </div>
+
+          <div class="feat-group">
+            <img src="./images/active-hearing-protect.png" alt="Active Hearing Protection Image">
+            <p><span>Active Hearing Protection</span> for safer, everyday listening.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- Tech Specs -->
       <section id="tech-specs" class="grid-con">
-        <h2 class="col-span-3 m-col-start-2">Airpods Play Spesification</h2>
+        <h2 class="col-span-3 m-col-start-2 m-col-span-5">Airpods Play Spesification</h2>
         <img id="smile-sunglass" class="col-span-1 m-col-start-11 m-col-span-1" src="./images/emojis/smile-sunglasses.png" alt="Smiley Emoji with Sunglasses">
 
         <model-viewer id="model" src="./model/3D_Earbuds-Sticker-Static.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./model/poster.webp" shadow-intensity="0" exposure="1" class="col-span-full m-col-start-2 m-col-span-10">
@@ -104,25 +129,16 @@
           </div>
         </model-viewer>
         
-        <img class="col-span-2 m-col-start-2 m-col-span-5" src="./images/audio.jpg">
-        <img class="col-span-2 m-col-start-7 m-col-span-5" src="./images/body.jpg">
-        <img class="col-span-2 m-col-start-2 m-col-span-5" src="./images/buds.jpg">
-        <img class="col-span-2 m-col-start-7 m-col-span-5" src="./images/case.jpg">
-
-        <div id="tech-details" class="col-span-full m-col-start-2 m-col-span-10">
-          <ul>
-            <li>Up to 2x more Active Noise Cancellation.</li>
-            <li>Adaptive Audio that tailors noise control to your environment.</li>
-            <li>Personalized Spatial Audio that immerses you in sound.</li>
-            <li>And active Hearing Protection for safer, everyday listening.</li>
-          </ul>
-        </div>
+        <img class="col-span-2 m-col-start-2 m-col-span-5" src="./images/detail-1.png" alt="Airpods Play Detail 1">
+        <img class="col-span-2 m-col-start-7 m-col-span-5" src="./images/detail-2.png" alt="Airpods Play Detail 2">
+        <img class="col-span-2 m-col-start-2 m-col-span-5" src="./images/detail-3.png" alt="Airpods Play Detail 3">
+        <img class="col-span-2 m-col-start-7 m-col-span-5" src="./images/detail-4.jpg" alt="Airpods Play Detail 4">
       </section>
 
       <!-- X-Ray Slider -->
       <section id="x-ray-cont" class="grid-con">
         <img id="eyes-emoji" class="col-span-1 m-col-start-2" src="./images/emojis/eyes.png" alt="Eyes Emoji">
-        <h2 class="col-span-4 m-col-start-8">Look What's Behind The Machine</h2>
+        <h2 class="col-span-3 m-col-start-7 m-col-span-5">Look What's Behind The Machine</h2>
 
         <!-- X-Ray Divider Section -->
         <div class="col-span-full m-col-start-2 m-col-span-10">
@@ -264,6 +280,9 @@
     <!-- GSAP Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    
+    <!-- Scroll Smoother -->
+    <script src="js/ScrollSmoother.js"></script>
 
     <!-- Main JS -->
     <script src="./js/main.js"></script>

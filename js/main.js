@@ -152,6 +152,26 @@
     loadInfo();
 
     // ============================================
+
+    // Feat Card Carousel
+
+    const featCarousel = document.querySelector('.f-carousel');
+    const featGroup = document.querySelectorAll('.feat-group');
+
+    gsap.to(featCarousel, {
+      xPercent: -50 * (featGroup.length - 2.5),
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: ".feat-carousel-cont",
+        start: "top top",
+        end: "+=400",
+        scrub: 2, 
+        pin: true, 
+        markers: false 
+      }
+    });
+
+    // ============================================
     
     // X-Ray Slider Function
     const divider = document.querySelector("#divider");

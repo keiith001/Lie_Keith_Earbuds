@@ -59,10 +59,32 @@
     }
 }
 
+.feat-carousel-cont {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+    background-size: cover;
+
+    .f-carousel {
+        display: flex;
+        gap: 20px;
+        will-change: transform;
+    }
+}
+
 #tech-specs {
     background-color: rgb(250, 250, 250);
     padding-top: 20px;
     padding-bottom: 20px;
+
+    h2 {
+        font-size: v.$title;
+        margin-bottom: 20px;
+    }
 
     #tech-details {
         font-family: v.$body-font;
@@ -72,9 +94,13 @@
         margin-bottom: 20px;
     }
 
+    #smile-sunglass {
+        width: 50px;
+    }
+
     img {
         border-radius: 20px;
-        margin-bottom: 20px;
+        margin: 20px auto;
     }
 }
 
@@ -83,7 +109,13 @@
     padding-bottom: 20px;
 
     h2 {
+        font-size: v.$title;
         text-align: end;
+        margin-bottom: 20px;
+    }
+
+    #eyes-emoji {
+        width: 50px;
     }
 }
 
@@ -91,12 +123,13 @@
     #overview {
         margin-top: 125px;
         margin-bottom: 50px;
-        padding: 20px;
+        padding-top: 200px;
+        padding-bottom: 200px;
 
         #grin-face {
             position: absolute;
             width: 80px;
-            top: -80px;
+            top: 80px;
             left: 50%;
             margin-left: -40px;
         }
@@ -104,7 +137,7 @@
         #heart-face {
             position: absolute;
             width: 50px;
-            top: -40px;
+            top: 120px;
             left: 50%;
             margin-left: -110px;
             rotate: -30deg;
@@ -113,7 +146,7 @@
         #smile-face {
             position: absolute;
             width: 50px;
-            top: -40px;
+            top: 120px;
             right: 50%;
             margin-right: -110px;
             rotate: 30deg;
@@ -127,23 +160,41 @@
         }
     }
 
+    .feat-carousel-cont {
+        padding: 60px;
+
+        .f-carousel {
+            gap: 40px;
+        }
+    }
+    
+
     #tech-specs {
         padding-top: 50px;
         padding-bottom: 50px;
 
         h2 {
-            font-size: v.$m-title;
+            font-size: v.$l-title;
             margin-bottom: 40px;
         }
+    }
 
-        #tech-details {
-            font-family: v.$body-font;
-            font-size: v.$m-bodycopy;
-            font-weight: 400;
-            padding-left: 10px;
-            margin-bottom: 20px;
+    #img-gallery {
+    
+        .img-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+    
+            img {
+                width: 260px;
+                padding: 0;
+            }
         }
     }
+    
 
     #x-ray-cont {
         padding-top: 50px;
@@ -155,4 +206,21 @@
         }
     }
 
+}
+
+@media screen and (min-width: 1200px) {
+    #tech-specs {
+        margin-top: 150px;
+        margin-bottom: 100px;
+        border-radius: 30px;
+    }
+
+    .feat-carousel-cont {
+        padding: 60px;
+
+        .f-carousel {
+            gap: 60px;
+        }
+    }
+    
 }
