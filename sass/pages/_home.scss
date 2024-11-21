@@ -11,6 +11,7 @@
     margin-top: 100px;
     margin-bottom: 50px;
     padding: 20px;
+    scroll-margin-top: 200px;
 
     #grin-face {
         position: absolute;
@@ -80,6 +81,7 @@
     background-color: rgb(250, 250, 250);
     padding-top: 20px;
     padding-bottom: 20px;
+    scroll-margin-top: 200px;
 
     h2 {
         font-size: v.$title;
